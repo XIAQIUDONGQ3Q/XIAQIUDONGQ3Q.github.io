@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script type="text/javascript">
+            function setStorage(){
+                if(localStorage.counter){
+                    localStorage.counter=Number(localStorage.counter)+1;
+                }else{
+                    localStorage.counter=1;
+                }
+                return localStorage.counter;
+            }
+            var counter=setStorage();
+            var oBox=document.getElementById('box');
+            oBox.innerHTML="该网页被访问的次数为"+counter+"次";            
+        </script>
+    </body>
+</html>
+
